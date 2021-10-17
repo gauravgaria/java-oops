@@ -10,7 +10,7 @@ public class Array {
             names[1] = "nimesh";
 
             for(String name:names)
-            System.out.println(name);
+            System.out.println(name + "yes");
 
     }
 
