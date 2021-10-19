@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class DispatchController {
 
+    final private static String _username = "gary";
     //----- method overloading -----//
     /*** NOTE: static method can be called directly -> since only one instance
      * */
@@ -23,15 +24,39 @@ public class DispatchController {
         // use of static className.method/var -> since there is only one instance of static.
         System.out.println(DispatchController.staticMessage());
 
+        /** constructor null pointer error example.
+         * */
+        new Dispatch("GAURAV");
+        new Dispatch().setConnection();
+
         System.out.println(sum(1,2));
         System.out.println(sum(2,3,5));
         System.out.println(OuterClass.message() + OuterClass.url);
+
+        /** Check how return is working
+         * */
+
+        validateUser();
     }
 
     private static String staticMessage(){
+
         return "I am a static method.!";
     }
 
+    /** return statement -> will not let execute the code further in that particular func and move ahead. -> sout(return will not let me call) not be executed
+     * */
+
+    public static void validateUser(){
+        if(_username.equals("gary")){
+            System.out.println("welcome admin");
+            return;
+        }else if(_username.equals("giridhar")){
+            System.out.println("welcome user");
+            return;
+        }
+        System.out.println("return will not let me call");
+    }
 }
 
 class OuterClass{

@@ -7,6 +7,9 @@ public class Dispatch {
     private String[] images;
     private String barcode;
     private String username;
+    private static String _connector = null; // **** has one instance each time this class constructor class it will not be null ***//
+  //  private String _connector = null;  // ** Dispatch("Gaurav") constructor stores in _connector -> but when Dispatch(); called again _connector intialize to null
+                                       //** But not with static keyword since it has one instance.
 
     /*** NOTE: There is always a default constructor but it is not seen, but is there when .java converts to .class file ***/
     public Dispatch(){}
@@ -19,6 +22,14 @@ public class Dispatch {
         this.images = images;
         this.barcode = barcode;
         this.username = username;
+    }
+
+    public Dispatch(String connector){
+        _connector = connector;
+    }
+
+    public void setConnection (){
+        System.out.println(_connector.toLowerCase());
     }
 
     public int getLoadNo() {
