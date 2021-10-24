@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class Calculator {
 
     private Utility util;
+
     public static void main(String[] args) {
         new Calculator().askUserInput();
     }
 
-    public int addNumbers(int num1, int num2){
-        return num1 + num2;
-    }
+    public int addNumbers(int num1, int num2){return num1 + num2;}
 
     public int subtractNumbers(int num1, int num2){
         return num1 - num2;
