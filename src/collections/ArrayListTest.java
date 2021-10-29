@@ -38,8 +38,6 @@ public class ArrayListTest implements IArrayListTest {
             performOperation(ops);
         }
 
-
-
     }
 
     public void userInputInterface(){
